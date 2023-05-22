@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FundrsVC | Resource Page</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#FF1F30">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+  
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper position-relative zindex-2">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="140" alt="fundrs.vc" id="header-logo">
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="for_founders.html" class="nav-link">For Founders</a>
+                </li>
+                <li class="nav-item">
+                  <a href="investors.html" class="nav-link">For Investrors</a>
+                </li>
+                <li class="nav-item">
+                  <a href="find_investors.html" class="nav-link">Find Investors</a>
+                </li>
+                <li class="nav-item">
+                  <a href="templete_page.html" class="nav-link">Templetes</a>
+                </li>
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top d-lg-none d-flex flex-column">
+              <a href="signin.html" class="btn btn-outline-primary w-100" target="_self" rel="noopener">
+                &nbsp;Sign in
+              </a>
+              <a href="#" class="btn btn-primary w-100 mt-3" target="_self" rel="noopener">
+                &nbsp;Start your free trial
+              </a>
+            </div>      
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="signin.html" class="btn btn-outline-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_self" rel="noopener">
+            &nbsp;Sign in
+          </a>
+          <a href="#" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex mx-3" target="_self" rel="noopener">
+            &nbsp;Start your free trial
+          </a>
+        </div>
+      </header>
+
+      <div class="bg-secondary pt-5">
+  
+        <!-- Breadcrumb -->
+        <nav class="container pt-5 pb-4 mb-lg-2" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-lg-3 mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Resource Page</li>
+          </ol>
+        </nav>
+  
+  
+        <!-- Page title + Services grid -->
+        <section class="container pb-2 pb-md-4 pb-lg-5 mb-3">
+          <h1 class="pb-4">Services</h1>
+          <div class="row row-cols-1 row-cols-md-2">
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/cms.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Custom Software Development
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Nisi, dis sed cursus eget pellentesque mattis. Odio eu proin aliquam a. Semper bibendum tellus non tellus, facilisi dignissim in quam massa. Aliquam, feugiat ut cum tellus, sit. Quis consectetur gravida ac ac lectus cursus egestas.</p>
+                </div>
+              </a>
+            </div>
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Software Integration
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Id eget blandit sapien cras massa lectus lorem placerat. Quam dolor commodo fermentum bibendum dictumst. Risus pretium eget at viverra eget. Sit neque adipiscing malesuada blandit justo, quam.</p>
+                </div>
+              </a>
+            </div>
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Mobile App Development
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Nunc, justo, diam orci, dictum purus convallis risus. Suscipit hendrerit at egestas id id blandit interdum est. Integer fames placerat turpis pretium quis hac leo lacus. Orci, dictum nunc mus quis semper eu bibendum enim, morbi.</p>
+                </div>
+              </a>
+            </div>
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Business Analytics
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Gravida eget euismod tempus diam dignissim quam. Dignissim magnis blandit faucibus convallis augue nisl, etiam. Feugiat ut molestie non arcu senectus sed. Diam pellentesque sit mattis nec amet varius nunc a sed.</p>
+                </div>
+              </a>
+            </div>
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/web-search.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Software Testing
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Quis rhoncus quam venenatis facilisi. Risus dis libero nisl condimentum quis. Tincidunt ultricies vulputate ornare nunc rhoncus in. Ultrices dolor eu natoque volutpat praesent curabitur ultricies.</p>
+                </div>
+              </a>
+            </div>
+  
+            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+              <a href="single_resource.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                <div class="card-body pt-3">
+                  <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                    <img src="assets/img/resource-page/timer.svg" class="d-block m-1" width="40" alt="Icon">
+                  </div>
+                  <h2 class="h4 d-inline-flex align-items-center">
+                    Project Management
+                    <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                  </h2>
+                  <p class="fs-sm text-body mb-0">Massa dis morbi sagittis, tellus sit gravida. Id ut non ut in faucibus eu, ac. Tempus feugiat enim id pellentesque a sagittis vitae, convallis. Nunc, arcu enim orci ullamcorper aenean. Scelerisque eget a nibh bibendum commodo.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- Features -->
+      <section class="container pb-5 mb-2 mb-md-4 mb-lg-5">
+        <h2 class="h1 text-center pt-1 pt-xl-2 mb-4">Why Choose Us?</h2>
+        <p class="fs-lg text-muted text-center pb-4 mb-2 mb-lg-3">We personalize how we work to fit your project needs. Our approach helps augment innovation.</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 pb-xl-3">
+          <div class="col text-center border-end">
+            <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+              <img src="assets/img/resource-page/01.svg" width="32" alt="Icon">
+            </div>
+            <h3 class="h5 mb-2 mb-lg-0">Build a functional prototype in 24 hrs</h3>
+          </div>
+          <div class="col text-center border-end">
+            <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+              <img src="assets/img/resource-page/02.svg" width="32" alt="Icon">
+            </div>
+            <h3 class="h5 mb-2 mb-lg-0">Create an MVP within two weeks</h3>
+          </div>
+          <div class="col text-center border-end">
+            <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+              <img src="assets/img/resource-page/03.svg" width="32" alt="Icon">
+            </div>
+            <h3 class="h5 mb-2 mb-lg-0">Kickstart software development</h3>
+          </div>
+          <div class="col text-center">
+            <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+              <img src="assets/img/resource-page/04.svg" width="32" alt="Icon">
+            </div>
+            <h3 class="h5 mb-2 mb-lg-0">Get 24/7 tech & business support</h3>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contact form -->
+      <section class="container">
+        <div class="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-lg-0">
+          <div class="row align-items-center pt-1 pb-2 py-lg-4">
+            <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 mb-4 pb-3 mb-md-0 pb-md-0">
+              <h2 class="h1 mb-lg-4">Get in Touch</h2>
+              <p class="pb-2 pb-md-4 pb-lg-5">Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
+              <h3 class="mb-lg-4">Contact Info</h3>
+              <ul class="list-unstyled pb-3 pb-md-4 pb-lg-5 mb-2">
+                <li class="mb-2">
+                  <a href="tel:4065550120" class="nav-link d-flex align-items-center p-0">
+                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                    (406) 555-0120
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="mailto:example@email.com" class="nav-link d-flex align-items-center p-0">
+                    <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                    example@email.com
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="nav-link d-flex align-items-center p-0">
+                    <i class="bx bx-map fs-xl text-primary me-2"></i>
+                    2464 Royal Ln. Mesa,New Jersey 45463
+                  </a>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-facebook me-3">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-twitter me-3">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-linkedin me-3">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 offset-xl-1">
+              <div class="card border-0 shadow-sm p-sm-2">
+                <form class="card-body needs-validation" novalidate>
+                  <div class="mb-4">
+                    <label for="service" class="form-label fs-base">Service</label>
+                    <select id="service" class="form-select form-select-lg" required>
+                      <option value="" selected disabled>Choose the service you are interested in</option>
+                      <option value="Custom Software Development">Custom Software Development</option>
+                      <option value="Software Integration">Software Integration</option>
+                      <option value="Mobile App Development">Mobile App Development</option>
+                      <option value="Business Analytics">Business Analytics</option>
+                      <option value="Software Testing">Software Testing</option>
+                      <option value="Project Management">Project Management</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose the service!</div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="name" class="form-label fs-base">Full name</label>
+                    <input type="text" id="name" class="form-control form-control-lg" required>
+                    <div class="invalid-feedback">Please enter your name!</div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="email" class="form-label fs-base">Email address</label>
+                    <input type="email" id="email" class="form-control form-control-lg" required>
+                    <div class="invalid-feedback">Please provide a valid email address!</div>
+                  </div>
+                  <div class="mb-4 pb-2">
+                    <label for="message" class="form-label fs-base">Email address</label>
+                    <textarea id="message" class="form-control form-control-lg" rows="3" placeholder="Tell us about your project" required></textarea>
+                    <div class="invalid-feedback">Please enter you message!</div>
+                  </div>
+                  <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send request</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5" style="margin-top: -150px;">
+      <div style="height: 158px;"></div>
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/logoBlack.svg" width="140" alt="fundrs.vc">
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
+            <form class="needs-validation" novalidate>
+              <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
+              <div class="input-group">
+                <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  Company
+                </h6>
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item"><a href="about.html" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Careers</a></li>
+                  <li class="nav-item"><a href="contact.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a>
+                  </li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Community</a></li>
+                </ul>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp;
+                      Conditions</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  Resource
+                </h6>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Articles</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Guides</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Knowledge Base</a></li>
+                  <li class="nav-item"><a href="templete_page.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Templates</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Integrations</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Newsletter</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><a href="for_founders.html" class="nav-link d-inline-block px-0 pt-1 pb-2">For
+                      Founders</a></li>
+                  <li class="nav-item"><a href="investors.html" class="nav-link d-inline-block px-0 pt-1 pb-2">For
+                      Investors</a></li>
+                  <li class="nav-item"><a href="find_investors.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Find
+                      Investors</a></li>
+                  <li class="nav-item"><a href="pricing.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Pricing</a>
+                  </li>
+                  <li class="nav-item"><a href="blog.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+    <script>
+      function setColorScheme(scheme) {
+        let root = document.getElementsByTagName('html')[0];
+        switch (scheme) {
+          case 'dark':
+            // console.log(‘dark’);
+            root.classList.add('dark-mode');
+            document.getElementById('header-logo').src = 'assets/img/logoBlack.svg';
+            document.getElementById('footer-logo').src = 'assets/img/logoBlack.svg';
+            break;
+          case 'light':
+            // console.log(‘light’);
+            root.classList.remove('dark-mode');
+            document.getElementById('header-logo').src = 'assets/img/logo.svg';
+            document.getElementById('footer-logo').src = 'assets/img/logo.svg';
+            break;
+          default:
+            console.log('default');
+            break;
+        }
+      }
+      function getPreferredColorScheme() {
+        if (window.matchMedia) {
+          if (window.matchMedia('(prefers-color-scheme:dark)').matches) {
+            return 'dark';
+          } else {
+            return 'light';
+          }
+        }
+        return 'light';
+      }
+      function updateColorScheme() {
+        setColorScheme(getPreferredColorScheme());
+      }
+      if (window.matchMedia) {
+        var colorSchemeQuery = window.matchMedia('(prefers-color-scheme:dark)');
+        colorSchemeQuery.addEventListener('change', updateColorScheme);
+      }
+      updateColorScheme();
+    </script>
+  </body>
+</html>

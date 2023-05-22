@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FundrsVC | Login</title>
+		<meta charset="utf-8" />
+		<meta name="description"
+			content="Craft admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+		<meta name="keywords"
+			content="Craft, bootstrap, bootstrap 5, admin themes, dark mode, free admin themes, bootstrap admin, bootstrap dashboard" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Craft - Bootstrap 5 HTML Admin Dashboard Theme" />
+		<meta property="og:url" content="https://themes.getbootstrap.com/product/craft-bootstrap-5-admin-dashboard-theme" />
+		<meta property="og:site_name" content="Keenthemes | Craft" />
+		<link rel="canonical" href="https://preview.keenthemes.com/craft" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+		<link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="kt_body" class="auth-bg">
+		
+		<div class="d-flex flex-column flex-root">
+			<div class="d-flex flex-column flex-xl-row flex-column-fluid">
+				<div class="d-flex flex-column flex-lg-row-fluid">
+					<div class="d-flex flex-row-fluid flex-center p-10">
+						<div class="d-flex flex-column">
+							<a href="../dist/index.html" class="mb-15">
+								<img alt="Logo" src="../assets/media/logos/logo-default.svg"  id="header-logo"  class="h-60px" />
+							</a>
+							<h1 class="text-dark fs-3x mb-5">Welcome, Guest!</h1>
+							<div class="fw-semibold fs-3 text-gray-400 mb-10">Create an account and access the best purpose-built
+							<br />solution for founders and investors</div>
+						</div>
+					</div>
+					<div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-200px min-h-xl-450px" style="background-image: url('../assets/media/illustrations/sigma-1/5.png')"></div>
+					
+				</div>
+				<div class="flex-row-fluid d-flex flex-center justfiy-content-xl-first p-10">
+					<div class="d-flex flex-center p-15 bg-body shadow-sm rounded w-100 w-md-550px mx-auto ms-xl-20">
+						
+						<form class="form w-100 mb-10" novalidate="novalidate" data-kt-redirect-url="./account-details.html"
+							id="kt_sing_in_two_steps_form">
+							<div class="text-center mb-10">
+								<img alt="Logo" class="mh-125px theme-light-show"
+									src="../assets/img/auth/smartphone.svg" />
+								<img alt="Logo" class="mh-125px theme-dark-show"
+									src="../assets/img/auth/smartphone-dark.svg" />
+							</div>
+							
+							<div class="text-center mb-10">
+								<h1 class="text-dark mb-3">Verify your email</h1>
+								<div class="text-muted fw-semibold fs-5 mb-5">Enter the verification code we sent to
+								</div>
+								<div class="fw-bold text-dark fs-3">j*****d@acme.com</div>
+							</div>
+							<div class="mb-10 px-md-10">
+								<div class="fw-bold text-start text-dark fs-6 mb-1 ms-1">Type your 6 digit security code
+								</div>
+								<div class="d-flex flex-wrap flex-stack">
+									<input type="text" name="code_1" data-inputmask="'mask': '9', 'placeholder': ''"
+										maxlength="1"
+										class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+										value="" />
+									<input type="text" name="code_2" data-inputmask="'mask': '9', 'placeholder': ''"
+										maxlength="1"
+										class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+										value="" />
+									<input type="text" name="code_3" data-inputmask="'mask': '9', 'placeholder': ''"
+										maxlength="1"
+										class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+										value="" />
+									<input type="text" name="code_4" data-inputmask="'mask': '9', 'placeholder': ''"
+										maxlength="1"
+										class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+										value="" />
+									<input type="text" name="code_5" data-inputmask="'mask': '9', 'placeholder': ''"
+										maxlength="1"
+										class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+										value="" />
+								</div>
+							</div>
+							<div class="d-flex flex-center">
+								<a href="./account-details.html" id="kt_sing_in_two_steps_submit"
+									class="btn btn-lg btn-primary fw-bold w-100">
+									<span class="indicator-label">Create an Account</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>var hostUrl = "assets/";</script>
+		<script src="../assets/plugins/global/plugins.bundle.js"></script>
+		<script src="../assets/js/scripts.bundle.js"></script>
+        <script src="../assets/js/custom/authentication/sign-in/two-steps.js"></script>
+		<script>
+			function setColorScheme(scheme) {
+				let defaultThemeMode = 'light';
+				let themeMode;
+	
+				switch (scheme) {
+					case 'dark':
+						themeMode = 'dark';
+						document.documentElement.setAttribute("data-theme", themeMode);
+						document.getElementById('header-logo').src = '../assets/img/logoBlack.svg';
+						break;
+					case 'light':
+						themeMode = 'light';
+						document.documentElement.setAttribute("data-theme", themeMode);
+						document.getElementById('header-logo').src = '../assets/media/logos/logo-default.svg';
+						break;
+					default:
+						console.log('default');
+						break;
+				}
+			}
+			function getPreferredColorScheme() {
+				if (window.matchMedia) {
+					if (window.matchMedia('(prefers-color-scheme:dark)').matches) {
+						return 'dark';
+					} else {
+						return 'light';
+					}
+				}
+				return 'light';
+			}
+			function updateColorScheme() {
+				setColorScheme(getPreferredColorScheme());
+			}
+			if (window.matchMedia) {
+				var colorSchemeQuery = window.matchMedia('(prefers-color-scheme:dark)');
+				colorSchemeQuery.addEventListener('change', updateColorScheme);
+			}
+			updateColorScheme();
+		</script>
+	</body>
+</html>
